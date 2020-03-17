@@ -1,0 +1,17 @@
+/* pages/favoriteStore/favoriteStore.wxss */
+ .oneStore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  background-color: #fff;
+} 
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 80rpx;
+  padding-top: 20rpx;
+}

@@ -1,0 +1,7 @@
+{
+  
+  "usingComponents": {
+     "shop-item": "../../components/shopItem/index",
+     "van-cell": "/miniprogram_npm/vant-weapp/cell/index"
+    }
+  }

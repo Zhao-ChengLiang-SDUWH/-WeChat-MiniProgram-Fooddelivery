@@ -1,0 +1,98 @@
+<!--pages/storeUpdate/storeUpdate.wxml-->
+<form style="padding-top:60rpx" bindsubmit="onSubmit">
+<van-cell-group>
+<van-field
+    value="{{userInfo.name}}"
+    label="店铺名称"
+    placeholder="请输入店铺名称"
+    name="name"
+    input-align="right"
+  />
+  <van-field
+    value="{{userInfo.phone}}"
+    label="店铺联系电话"
+    placeholder="请输入店铺联系电话"
+    name="phone"
+    input-align="right"
+  />
+  <van-field
+    value="{{userInfo.des}}"
+    label="店铺描述"
+    placeholder="请输店铺描述"
+    name="des"
+    input-align="right"
+  />
+  <van-field
+    value="{{userInfo.address}}"
+    label="店铺地址"
+    placeholder="请输入店铺地址"
+    name="address"
+    input-align="right"
+  />
+  <van-field
+    value="{{userInfo.avg}}"
+    label="店铺平均价格"
+    placeholder="请输入店铺平均价格"
+    name="avg"
+    input-align="right"
+  />
+  <van-field
+    value=""
+    label="店铺标签"
+    placeholder="请输新的店铺标签"
+    name="tag"
+    input-align="right"
+  />
+  <van-field
+    value="{{userInfo.startingPrice}}"
+    label="起送价"
+    placeholder="请输起送价"
+    name="startingPrice"
+    input-align="right"
+  /><van-field
+    value="{{userInfo.deliveryFee}}"
+    label="配送费"
+    placeholder="请输配送费"
+    name="deliveryFee"
+    input-align="right"
+  /><van-field
+    value="{{userInfo.lunchboxFee}}"
+    label="餐盒费"
+    placeholder="请输餐盒费"
+    name="lunchboxFee"
+    input-align="right"
+  /><van-field
+    value="{{userInfo.userDiscount}}"
+    label="新用户减款"
+    placeholder="请输新用户减款"
+    name="userDiscount"
+    input-align="right"
+  />
+  <van-field
+    value=""
+    label="满减额度"
+    placeholder="请添加满减额度"
+    name="total"
+    input-align="right"
+  />
+  <van-field
+    value=""
+    label="优惠金额"
+    placeholder="请添加对应优惠金额"
+    name="discount"
+    input-align="right"
+  />
+</van-cell-group>
+<view style="padding-top:100rpx">
+<button type="primary" plain="{{true}}" form-type="submit" >确认</button>
+</view>
+<van-dialog
+  showCancelButton="{{false}}"
+  show="{{show2}}"
+  title="请完成信息的完善"
+  style="text-align:center"
+>
+</van-dialog>
+</form>
+
+

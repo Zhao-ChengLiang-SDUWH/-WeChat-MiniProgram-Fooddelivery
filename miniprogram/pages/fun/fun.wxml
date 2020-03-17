@@ -1,0 +1,15 @@
+<!--pages/fun/fun.wxml-->
+
+<import src="/template/tabbar.wxml"/> 
+ <template is="tabBar" data="{{tabBar}}"/>
+ 
+<van-tabs active="{{ active }}" bind:change="onChange" costum-class="s" sticky>
+
+  <van-tab title="个人数据"></van-tab>
+  <van-tab title="学院排行"></van-tab>
+  
+</van-tabs>
+<view class="container" >
+<ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}" wx:if="{{active==0}}"></ec-canvas>
+<ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec2 }}"  wx:if="{{active==1}}"></ec-canvas>
+</view>

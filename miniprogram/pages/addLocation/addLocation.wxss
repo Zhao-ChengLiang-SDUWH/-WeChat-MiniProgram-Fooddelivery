@@ -1,0 +1,13 @@
+/* pages/addLocation/addLocation.wxss */
+page {
+  background-color: white;
+}
+
+.choose {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30rpx;
+  margin-left: 300rpx;
+  font-size: 35rpx;
+}

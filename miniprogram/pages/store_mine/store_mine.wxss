@@ -1,0 +1,6 @@
+/* pages/store_mine/store_mine.wxss */
+.image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

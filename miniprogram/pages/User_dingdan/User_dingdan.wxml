@@ -1,0 +1,117 @@
+<!--miniprogram/pages/User_dingdan/User_dingdan.wxml-->
+
+<import src="/template/tabbar.wxml"/> 
+ <template is="tabBar" data="{{tabBar}}"/>
+ 
+ <van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="当前订单"><block wx:for="{{order}}" class="van-hairline--top-bottom" >    
+<view class="warp" data-orderid='{{item._id}}' data-goods='{{item.goods}}' data-rideropenid='{{item.riderOpenid}}' data-rideropenid='{{item.riderOpenid}}' data-merchantopenid='{{item.merchantOpenid}}' bindtap="onorderDetail" >
+    <view class="title hairline">
+      <view class="title-left">
+        
+          <text>{{item.merchant}}</text>
+        
+        <view class="title-left-time font-99-24 dis">
+          <view >下单时间:</view>
+          <view >{{item.orderTime}}</view>
+        </view>
+      </view>  
+      <view class="title-right time">
+        <image class="title-right-img time-back"
+        src="../../assets/images/order/time.png" />
+        <text class="font-fe-20 dis">{{item.condition}}</text>
+      </view>
+    </view>
+    
+    <view class="content hairline ">
+      <view class="content-top">
+        <text class="">{{item.nickName}}</text>
+        <view class="tag dis tag-common">普通会员</view>
+      </view>   
+      <view class="content-buttom">{{item.address}}</view>
+    </view>
+    
+    <view class="footer">
+      <text class="font-66-28">{{item.goods[0].name}} × {{item.goods[0].number}} ; {{item.goods[1].name}} × {{item.goods[1].number}} 等 </text>
+      <view >
+        <text class="font-fd-24" >原价：¥</text>
+        <text class="font-fd-32" style='text-decoration:line-through'  >{{item.total}}</text>
+        <text decode="{{true}}" >&emsp;&emsp;</text>
+        <text class="font-fd-24">实付：¥</text>
+        <text class="font-fd-32" >{{item.actualTotal}}</text>
+      </view>
+    </view>
+
+  </view>
+</block></van-tab>
+  <van-tab title="历史订单"><block wx:for="{{history}}" class="van-hairline--top-bottom" >    
+<view class="warp" data-orderid='{{item._id}}' data-goods='{{item.goods}}' data-rideropenid='{{item.riderOpenid}}' data-rideropenid='{{item.riderOpenid}}' data-merchantopenid='{{item.merchantOpenid}}' bindtap="onorderDetail" >
+    <view class="title hairline">
+      <view class="title-left">
+        
+          <text>{{item.merchant}}</text>
+        
+        <view class="title-left-time font-99-24 dis">
+          <view >下单时间:</view>
+          <view >{{item.orderTime}}</view>
+        </view>
+      </view>  
+      <view class="title-right time">
+        <image class="title-right-img time-back"
+        src="../../assets/images/order/time.png" />
+        <text class="font-fe-20 dis">已完成</text>
+      </view>
+    </view>
+    
+    <view class="content hairline ">
+      <view class="content-top">
+        
+        <view class="tag dis tag-common">普通会员</view>
+      </view>   
+      <view class="content-buttom">{{item.address}}</view>
+    </view>
+    
+    <view class="footer">
+      <text class="font-66-28">{{item.goods[0].name}} × {{item.goods[0].number}} ; {{item.goods[1].name}} × {{item.goods[1].number}} 等 </text>
+      <view >
+        
+        <text decode="{{true}}" >&emsp;&emsp;</text>
+        <text class="font-fd-24">实付：¥</text>
+        <text class="font-fd-32" >{{item.total}}</text>
+      </view>
+    </view>
+
+  </view>
+</block></van-tab>
+  
+</van-tabs>
+ 
+ 
+ 
+ 
+ 
+ <view wx:for="{{order}}" >
+<van-card title-class="title" desc-class="dis"
+  desc="{{item.actualTotal}}"
+  
+  title="{{ item.merchant}}"
+  >
+
+  <view slot="tags">
+    <van-tag plain wx:for="{{item.tags}}" >{{item}}</van-tag>
+  </view>
+  </van-card>
+</view>
+
+<view wx:for="{{history_order}}" wx:if="{{active==1}}">
+<van-card title-class="title" desc-class="dis"
+  desc="描述信息"
+  
+  title="{{ item.name}}"
+  thumb="{{item.url}}">
+
+  <view slot="tags">
+    <van-tag plain wx:for="{{item.tags}}" >{{item}}</van-tag>
+  </view>
+  </van-card>
+</view>

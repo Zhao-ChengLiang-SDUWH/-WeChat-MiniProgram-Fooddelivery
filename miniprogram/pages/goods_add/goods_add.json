@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "添加菜品",
+  "navigationBarBackgroundColor": "#FF8C00",
+  "navigationBarTextStyle": "white",
+
+  "enablePullDownRefresh": true,
+   
+  "usingComponents": {
+  "van-field": "../../miniprogram_npm/@vant/weapp/field/index",
+  "van-uploader": "../../miniprogram_npm/@vant/weapp/uploader/index",
+  "van-button": "../../miniprogram_npm/@vant/weapp/button/index"
+  
+}
+}

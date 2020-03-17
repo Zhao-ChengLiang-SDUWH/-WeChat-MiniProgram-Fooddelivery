@@ -1,0 +1,36 @@
+<!--pages/addnotice/addnotice.wxml-->
+
+<van-datetime-picker
+  type="time"
+  value="12:00"
+  show-toolbar="false"
+  bind:input="onInput"
+  title="选择吃饭提醒时间"
+  confirm-button-text=''
+  cancel-button-text=''
+  filter="{{ filter }}"
+/>
+<view>
+<van-radio-group value="{{ radio }}" bind:change="onChange">
+  <van-radio name="1">每天</van-radio>
+  <van-radio name="2">周一至周五</van-radio>
+  <van-radio name="3" >自定义</van-radio>
+</van-radio-group>
+
+<van-popup show="{{ show }}" bind:close="onClose">
+<van-checkbox-group value="{{ result1 }}" bind:change="onChange1">
+  <van-checkbox name="0">星期日</van-checkbox>
+  <van-checkbox name="1">星期一</van-checkbox>
+  <van-checkbox name="2">星期二</van-checkbox>
+  <van-checkbox name="3">星期三</van-checkbox>
+  <van-checkbox name="4">星期四</van-checkbox>
+  <van-checkbox name="5">星期五</van-checkbox>
+  <van-checkbox name="6">星期六</van-checkbox>
+</van-checkbox-group>
+</van-popup>
+</view>
+
+
+
+<van-button type="primary" size="large" color="#FF8C00" bind:click="add">添加提醒</van-button>
+

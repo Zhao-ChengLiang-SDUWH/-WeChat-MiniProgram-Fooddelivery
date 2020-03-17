@@ -1,0 +1,6 @@
+/* pages/createNewList/createNewList.wxss */
+.address {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}

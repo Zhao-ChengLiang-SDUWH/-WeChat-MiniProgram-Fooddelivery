@@ -1,0 +1,7 @@
+<!--pages/store_mine/store_mine.wxml-->
+<view class="image">
+<image src="{{userInfo.thumb}}" style="height:320rpx;width:430rpx;margin-top:100rpx" bindtap="changeImage"></image>
+<text style="font-size:45rpx;color:#363636;font-weight:bold;margin-top:40rpx">{{userInfo.name}}</text>
+<text style="color:#104E8B;font-size:35rpx;margin-top:30rpx">{{userInfo.des}}</text>
+</view>
+<van-cell center style="margin-top:180rpx" icon="setting" title="前往设置信息" size="large" bindtap="goUpdate" />

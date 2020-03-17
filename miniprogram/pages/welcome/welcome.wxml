@@ -1,0 +1,6 @@
+<!--pages/welcome/welcome.wxml-->
+<!-- <image class="backgroundImg" src="../../images/background.jpg" style="opacity:{{0.7}}"></image> -->
+<view class="welcome">
+<image class="logo" src="../../images/logo.png"></image>
+</view>
+<view><image src="../../images/welcome.png" class="welcomeImage"></image></view>

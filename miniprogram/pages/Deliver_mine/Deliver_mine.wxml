@@ -1,0 +1,19 @@
+<!--pages/Deliver_mine/Deliver_mine.wxml-->
+
+<import src="/template/tabbar.wxml"/> 
+ <template is="tabBar" data="{{tabBar}}"/>
+  
+<view class="information">
+<image class="avatar" src="{{avatarUrl}}" bindtap="chooseImage"></image>
+<text class="nickName">{{userInfo.nickName}}</text>
+</view>
+<view class="setting">
+<van-cell-group>
+  <van-cell center icon="gem" title="个人信息" size="large" bindtap="goUpdate" />
+  <van-cell center icon="star" title="我的排名" size="large"  bindtap="discount"/>
+</van-cell-group>
+</view>
+<view class="escape">
+<van-button round type="danger" size="normal" bindtap="logout">退出登录</van-button>
+</view>
+<van-dialog id="van-dialog" />

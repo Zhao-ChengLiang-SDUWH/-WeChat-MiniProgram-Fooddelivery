@@ -1,0 +1,175 @@
+<!--miniprogram/pages/Deliver_order/Deliver_order.wxml-->
+<block wx:for="{{orders}}">
+<view class="warp">
+  <view class="title hairline">
+    <view class="title-left">
+      <view class="title-left-num">
+        <text class="font-ff-40">{{item.orderId}}</text>
+      </view>
+      <!-- <view class="title-left-time font-99-24 dis">
+        <view >下单时间:</view>
+        <view >10:12</view>
+      </view> -->
+    </view>
+    <view class="title-right">
+      <image class="title-right-img"
+      src="../../assets/images/order/slice.png" />
+      <text class="font-fe-20 dis">{{item.condition}}</text>
+    </view>
+  </view>
+  <view class="content hairline ">
+    <view class="content-top">
+      <view class="content-top-left">
+        <text class="">{{item.nickName}}</text>
+        <view class="tag dis tag-general">普通会员</view>
+      </view>
+      <view class="content-top-right">
+        <image class="content--imag" src="../../assets/images/order/locate.png" />
+        <image class="content--imag" src="../../assets/images/order/tele.png" />
+      </view>
+    </view>
+    <view class="content-buttom">
+      <van-tag type="primary">1.8km</van-tag>
+      <text >{{item.address}}</text>
+    </view>
+  </view>
+  
+  <view class="footer">
+    <view class="font-99-24">
+      <view class="footer-item">
+        <text class="">{{item.acceptTime}}</text>
+        <text class="dis">已接单</text>
+      </view>
+      <view class="footer-item">
+        <text class="">{{item.deliverTime}}</text>
+        <text class="dis">已取餐</text>
+      </view>
+      <view class="footer-item">
+        <text class="">{{item.arriveTime}}</text>
+        <text class="dis">已送达</text>
+      </view>
+    </view>
+    <block wx:for="{{riders}}" wx:key="index" wx:for-item="r" >
+    <view >
+      <text class="font-fd-24">骑手:</text>
+      <text class="font-fd-24">{{r.nickName}}</text>
+      <text class="iconfont icon-sm-my-tele dis"></text>
+    </view>
+    </block>
+  </view>
+
+
+  <view class="body">
+    <van-cell-group>
+      <van-cell title-class="cell-title" title="商品明细" center>
+    </van-cell>
+
+   <block wx:for="{{goods}}">
+      <van-cell border="{{true}}" center>
+        <view slot="title">
+          <view class="solt-title">
+            <view class="item-image">
+              <image class="order-content-img" lazy-load mode="aspectFill" src="../../assets/icon/order01.png" />
+            </view>
+            <view>
+              <view>{{item.name}}</view>
+             
+            </view>
+          </view>
+        </view>
+        <view class="order-content-detail">
+          <view class="order-content-rdis">
+            ¥ {{item.price}}
+          </view>
+          <view >
+            × {{item.number}}
+          </view>
+        </view>
+      </van-cell>
+      </block>
+    
+
+    <block wx:for="{{stores}}" wx:key="index" wx:for-item="s" >
+      <van-cell border="{{true}}" center>
+        <view slot="title">
+          <view class="solt-title">
+            <text class="tag-tableware tag-common content tag-dis">包</text>
+            <view>
+              <text>包装费</text>
+            </view>
+          </view>
+        </view>
+        <view class="order-content-detail">
+          <view class="order-content-rdis">- {{s.lunchboxFee }}</view>
+        </view>
+      </van-cell>
+
+      <van-cell border="{{true}}" center>
+        <view slot="title">
+          <view class="solt-title">
+            <text class="tag-full tag-common content tag-dis">特</text>
+            <view>
+              <text>红包</text>
+            </view>
+          </view>
+        </view>
+        <view class="order-content-detail">
+          <view class="order-content-rdis">- 0</view>
+        </view>
+      </van-cell>
+
+      <van-cell border="{{true}}" center>
+        <view slot="title">
+          <view class="solt-title">
+            <text class="tag-te tag-common content tag-dis">减</text>
+            <view>
+              <text>满减优惠</text>
+            </view>
+          </view>
+        </view>
+        <view class="order-content-detail">
+          <view class="order-content-rdis">- 0</view>
+        </view>
+      </van-cell>
+
+      <van-cell border="{{true}}" center>
+        <view slot="title">
+          <view class="solt-title">
+            <text class="tag-first tag-common content tag-dis">首</text>
+            <view>
+              <text>新用户减</text>
+            </view>
+          </view>
+        </view>
+        <view class="order-content-detail">
+          <view class="order-content-rdis">- {{ s.userDiscount }}</view>
+        </view>
+      </van-cell>
+    </block>
+
+    <van-cell border>
+      <view class="font-b-sliod-content">原价：¥{{item.actualTotal}} 实收：¥{{item.actualTotal}}</view>
+    </van-cell>
+    </van-cell-group>
+  </view>
+
+  <view class="order-card order-info">
+    <van-cell-group>
+      <van-cell title-class="cell-title" title="用户信息" value="{{item._openid}}" />
+        <van-cell title="订单号">
+        {{item._id}}
+        </van-cell>
+      <van-cell title="下单时间">
+     {{item.orderTime}}
+      </van-cell>
+      <van-cell title="完成时间">
+      {{item.arriveTime }}
+      </van-cell>
+    </van-cell-group>
+  </view>
+</view>
+</block>
+
+<view class="btn-area">
+        <button style='color:#fff;background-color:#07C160' bindtap='acceptOrder'>接单</button>
+     </view>

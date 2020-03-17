@@ -1,0 +1,58 @@
+<!--pages/updateInformation/upateInformation.wxml-->
+
+<form style="padding-top:60rpx" bindsubmit="onSubmit">
+<van-cell-group>
+<van-field
+    value="{{userInfo.nickName}}"
+    label="昵称"
+    placeholder="请输入昵称"
+    name="nickName"
+    input-align="right"
+  />
+  <van-field
+    value="{{userInfo.name}}"
+    label="真实姓名"
+    placeholder="请输入真实姓名"
+    name="name"
+    input-align="right"
+  />
+  <van-field
+    value="{{gender}}"
+    label="性别"
+    placeholder="请输入性别"
+    name="gender"
+    input-align="right"
+  />
+  <van-field
+    value="{{userInfo.studentID}}"
+    label="学号"
+    placeholder="请输入学号"
+    name="studentID"
+    input-align="right"
+  />
+  <van-field
+    value="{{userInfo.phone}}"
+    label="电话号码"
+    placeholder="请输入电话号码"
+    error-message="{{error}}"
+    name="phone"
+    input-align="right"
+  />
+
+</van-cell-group>
+<van-cell  name="xueyuan" title="所在学院" value="{{institute}}" bind:click="showPopup" />
+
+<van-popup show="{{show}}" bind:close="onClose" position="bottom" >
+<van-picker columns="{{columns}}"  show-toolbar bind:confirm="onConfirm" bind:cancel="onCancel" />
+</van-popup>
+<view style="padding-top:150rpx">
+<button type="primary" plain="{{true}}" form-type="submit" >确认</button>
+</view>
+<van-dialog
+  showCancelButton="{{false}}"
+  show="{{show2}}"
+  title="请完成信息的完善"
+  style="text-align:center"
+>
+</van-dialog>
+</form>

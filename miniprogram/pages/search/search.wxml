@@ -1,0 +1,58 @@
+<!--pages/search/search.wxml-->
+<view  >
+ <van-search 
+  value="{{ value }}"
+  placeholder="想吃点什么"
+  input-align="center"
+  shape="round"
+  
+  bind:change="onChange"
+  bind:search="onSearch"
+/>
+</view >
+<van-dropdown-menu active-color="#FF8C00" >
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="change" />
+  <van-dropdown-item id="item" title="{{ itemTitle }}">
+    <van-cell title="{{ switchTitle1 }}">
+      <van-switch
+        slot="right-icon"
+        size="24px"
+        style="height: 26px"
+        checked="{{ switch1 }}"
+        bind:change="onSwitch1Change"
+        active-color="#FF8C00"
+      />
+    </van-cell>
+    <van-cell title="{{ switchTitle2 }}">
+      <van-switch
+        slot="right-icon"
+        size="24px"
+        style="height: 26px"
+        checked="{{ switch2 }}"
+        bind:change="onSwitch2Change"
+        active-color="#FF8C00"
+      />
+    </van-cell>
+    <van-button type="info" block bind:click="onConfirm" color="#FF8C00">
+      确定
+    </van-button>
+  </van-dropdown-item>
+</van-dropdown-menu>
+
+
+
+
+
+
+<view wx:for="{{stores}}" bindtap="shop" data-id="{{item._id}}">
+<van-card title-class="title" desc-class="dis"
+  desc="{{item.des}}  人均:{{item.avg}}"
+  
+  title="{{ item.name}}"
+  thumb="{{item.url}}">
+
+  <view slot="tags">
+    <van-tag plain wx:for="{{item.tags}}" >{{item}}</van-tag>
+  </view>
+  </van-card>
+</view>

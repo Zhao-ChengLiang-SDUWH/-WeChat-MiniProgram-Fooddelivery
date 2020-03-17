@@ -1,0 +1,19 @@
+/* pages/fun/fun.wxss */
+page{
+  background: white
+}
+
+.container{
+  padding-top:80rpx;
+ 
+  width:100%;
+  height:600rpx
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+.s{
+  width: 100%;
+  height: 100%;
+}

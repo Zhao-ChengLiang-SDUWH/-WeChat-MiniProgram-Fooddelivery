@@ -1,0 +1,287 @@
+<view class="container">
+<van-dialog
+  showCancelButton="{{false}}"
+  show="{{show}}"
+  bind:confirm="goUpdate"
+  title="请前往完善信息"
+  style="text-align:center"
+>
+</van-dialog>
+ <view  >
+ <van-search 
+  value="{{ value }}"
+  placeholder="查询订单（用户名）"
+  input-align="center"
+  shape="round"
+  
+  bind:change="onChange"
+  bind:search="onSearch"
+/>
+</view >
+ 
+
+<van-tabs swipeable active="待接单" bind:click="selectOrder">
+  <van-tab title="待接单" name="待接单" >
+  <block wx:for="{{orders}}" class="van-hairline--top-bottom" >    
+<view class="warp" data-orderid='{{item._id}}' data-goods='{{item.goods}}' data-rideropenid='{{item.riderOpenid}}' data-rideropenid='{{item.riderOpenid}}' data-merchantopenid='{{item.merchantOpenid}}' bindtap="onorderDetail" >
+    <view class="title hairline">
+      <view class="title-left">
+        <view class="title-left-num">
+          <text class="font-ff-40">{{ ordernum==0?'0':ordernum }}</text>
+        </view>
+        <view class="title-left-time font-99-24 dis">
+          <view >下单时间:</view>
+          <view >{{item.orderTime}}</view>
+        </view>
+      </view>  
+      <view class="title-right time">
+        <image class="title-right-img time-back"
+        src="../../assets/images/order/time.png" />
+        <text class="font-fe-20 dis">{{item.condition}}</text>
+      </view>
+    </view>
+    
+    <view class="content hairline ">
+      <view class="content-top">
+        <text class="">{{item.nickName}}</text>
+        <view class="tag dis tag-common">普通会员</view>
+      </view>   
+      <view class="content-buttom">{{item.address}}</view>
+    </view>
+    
+    <view class="footer">
+      <text class="font-66-28">{{item.goods[0].name}} × {{item.goods[0].number}} ; {{item.goods[1].name}} × {{item.goods[1].number}} 等 </text>
+      <view >
+        <text class="font-fd-24" >原价：¥</text>
+        <text class="font-fd-32" style='text-decoration:line-through'  >{{item.total}}</text>
+        <text decode="{{true}}" >&emsp;&emsp;</text>
+        <text class="font-fd-24">实付：¥</text>
+        <text class="font-fd-32" >{{item.actualTotal}}</text>
+      </view>
+    </view>
+
+  </view>
+</block>
+  </van-tab>
+  <van-tab title="出餐中" name="出餐中">
+   <block wx:for="{{orders}}" class="van-hairline--top-bottom" >    
+<view class="warp" data-orderid='{{item._id}}' data-goods='{{item.goods}}' data-rideropenid='{{item.riderOpenid}}' data-merchantopenid='{{item.merchantOpenid}}' bindtap="onorderDetail" >
+    <view class="title hairline">
+      <view class="title-left">
+        <view class="title-left-num">
+          <text class="font-ff-40">{{  ordernum==0?'0':ordernum }}</text>
+        </view>
+        <view class="title-left-time font-99-24 dis">
+          <view >下单时间:</view>
+          <view >{{item.orderTime}}</view>
+        </view>
+      </view>  
+      <view class="title-right time">
+        <image class="title-right-img time-back"
+        src="../../assets/images/order/time.png" />
+        <text class="font-fe-20 dis">{{item.condition}}</text>
+      </view>
+    </view>
+    
+    <view class="content hairline ">
+      <view class="content-top">
+        <text class="">{{item.nickName}}</text>
+        <view class="tag dis tag-common">普通会员</view>
+      </view>   
+      <view class="content-buttom">{{item.address}}</view>
+    </view>
+    
+    <view class="footer">
+      <text class="font-66-28">{{item.goods[0].name}} × {{item.goods[0].number}} 等</text>
+      <view >
+        <text class="font-fd-24" >原价：¥</text>
+        <text class="font-fd-32" style='text-decoration:line-through'  >{{item.total}}</text>
+        <text decode="{{true}}" >&emsp;&emsp;</text>
+        <text class="font-fd-24">实付：¥</text>
+        <text class="font-fd-32" >{{item.actualTotal}}</text>
+      </view>
+    </view>
+
+  </view>
+</block>
+  </van-tab>
+  <van-tab title="已接单" name="已接单">
+   <block wx:for="{{orders}}" class="van-hairline--top-bottom" >    
+<view class="warp" data-orderid='{{item._id}}' data-goods='{{item.goods}}' data-rideropenid='{{item.riderOpenid}}' data-merchantopenid='{{item.merchantOpenid}}' bindtap="onorderDetail" >
+    <view class="title hairline">
+      <view class="title-left">
+        <view class="title-left-num">
+          <text class="font-ff-40">{{  ordernum==0?'0':ordernum }}</text>
+        </view>
+        <view class="title-left-time font-99-24 dis">
+          <view >下单时间:</view>
+          <view >{{item.orderTime}}</view>
+        </view>
+      </view>  
+      <view class="title-right time">
+        <image class="title-right-img time-back"
+        src="../../assets/images/order/time.png" />
+        <text class="font-fe-20 dis">{{item.condition}}</text>
+      </view>
+    </view>
+    
+    <view class="content hairline ">
+      <view class="content-top">
+        <text class="">{{item.nickName}}</text>
+        <view class="tag dis tag-common">普通会员</view>
+      </view>   
+      <view class="content-buttom">{{item.address}}</view>
+    </view>
+    
+    <view class="footer">
+      <text class="font-66-28">{{item.goods[0].name}} × {{item.goods[0].number}} ; {{item.goods[1].name}} × {{item.goods[1].number}} 等</text>
+      <view >
+        <text class="font-fd-24" >原价：¥</text>
+        <text class="font-fd-32" style='text-decoration:line-through'  >{{item.total}}</text>
+        <text decode="{{true}}" >&emsp;&emsp;</text>
+        <text class="font-fd-24">实付：¥</text>
+        <text class="font-fd-32" >{{item.actualTotal}}</text>
+      </view>
+    </view>
+
+  </view>
+</block>
+  </van-tab>
+  <van-tab title="退消单" name="退消单">
+   <block wx:for="{{orders}}" class="van-hairline--top-bottom" >    
+<view class="warp" data-orderid='{{item._id}}' data-goods='{{item.goods}}' data-rideropenid='{{item.riderOpenid}}' data-merchantopenid='{{item.merchantOpenid}}' bindtap="onorderDetail" >
+    <view class="title hairline">
+      <view class="title-left">
+        <view class="title-left-num">
+          <text class="font-ff-40">{{  ordernum==0?'0':ordernum }}</text>
+        </view>
+        <view class="title-left-time font-99-24 dis">
+          <view >下单时间:</view>
+          <view >{{item.orderTime}}</view>
+        </view>
+      </view>  
+      <view class="title-right time">
+        <image class="title-right-img time-back"
+        src="../../assets/images/order/time.png" />
+        <text class="font-fe-20 dis">{{item.condition}}</text>
+      </view>
+    </view>
+    
+    <view class="content hairline ">
+      <view class="content-top">
+        <text class="">{{item.nickName}}</text>
+        <view class="tag dis tag-common">普通会员</view>
+      </view>   
+      <view class="content-buttom">{{item.address}}</view>
+    </view>
+    
+    <view class="footer">
+      <text class="font-66-28">{{item.goods[0].name}} × {{item.goods[0].number}} ; {{item.goods[1].name}} × {{item.goods[1].number}} 等</text>
+      <view >
+        <text class="font-fd-24" >原价：¥</text>
+        <text class="font-fd-32" style='text-decoration:line-through'  >{{item.total}}</text>
+        <text decode="{{true}}" >&emsp;&emsp;</text>
+        <text class="font-fd-24">实付：¥</text>
+        <text class="font-fd-32" >{{item.actualTotal}}</text>
+      </view>
+    </view>
+
+  </view>
+</block>
+  </van-tab>
+  <van-tab title="异常单" name="异常单">
+   <block wx:for="{{orders}}" class="van-hairline--top-bottom" >    
+<view class="warp" data-orderid='{{item._id}}' data-goods='{{item.goods}}' data-rideropenid='{{item.riderOpenid}}' data-merchantopenid='{{item.merchantOpenid}}' bindtap="onorderDetail" >
+    <view class="title hairline">
+      <view class="title-left">
+        <view class="title-left-num">
+          <text class="font-ff-40">{{  ordernum==0?'0':ordernum }}</text>
+        </view>
+        <view class="title-left-time font-99-24 dis">
+          <view >下单时间:</view>
+          <view >{{item.orderTime}}</view>
+        </view>
+      </view>  
+      <view class="title-right time">
+        <image class="title-right-img time-back"
+        src="../../assets/images/order/time.png" />
+        <text class="font-fe-20 dis">{{item.condition}}</text>
+      </view>
+    </view>
+    
+    <view class="content hairline ">
+      <view class="content-top">
+        <text class="">{{item.nickName}}</text>
+        <view class="tag dis tag-common">普通会员</view>
+      </view>   
+      <view class="content-buttom">{{item.address}}</view>
+    </view>
+    
+    <view class="footer">
+      <text class="font-66-28">{{item.goods[0].name}} × {{item.goods[0].number}} ; {{item.goods[1].name}} × {{item.goods[1].number}} 等</text>
+      <view >
+        <view class="font-fd-24" >原价：¥</view>
+        <view class="font-fd-32" style='text-decoration:line-through'  >{{item.total}}</view>
+        <view decode="{{true}}" >&emsp;&emsp;</view>
+        <view class="font-fd-24">实付：¥</view>
+        <view class="font-fd-32" >{{item.actualTotal}}</view>
+      </view>
+    </view>
+
+  </view>
+</block>
+  </van-tab>
+
+
+  <van-tab title="历史订单" name="历史订单" >
+  <block wx:for="{{hisorders}}" class="van-hairline--top-bottom" >    
+<view class="warp" data-orderid='{{item._id}}' data-goods='{{item.goods}}' data-rideropenid='{{item.riderOpenid}}' data-rideropenid='{{item.riderOpenid}}' data-merchantopenid='{{item.merchantOpenid}}' bindtap="onorderDetail1" >
+    <view class="title hairline">
+      <view class="title-left">
+        <view class="title-left-num">
+          <text class="font-ff-40">{{ hisordernum==0?'0':hisordernum }}</text>
+        </view>
+        <view class="title-left-time font-99-24 dis">
+          <view >下单时间:</view>
+          <view >{{item.orderTime}}</view>
+        </view>
+      </view>  
+      <view class="title-right time">
+        <image class="title-right-img time-back"
+        src="../../assets/images/order/time.png" />
+        <text class="font-fe-20 dis">{{item.condition}}</text>
+      </view>
+    </view>
+    
+    <view class="content hairline ">
+      <view class="content-top">
+        <text class="">{{item.nickName}}</text>
+        <view class="tag dis tag-common">普通会员</view>
+      </view>   
+      <view class="content-buttom">{{item.address}}</view>
+    </view>
+    
+    <view class="footer">
+      <text class="font-66-28">{{item.goods[0].name}} × {{item.goods[0].number}} ; {{item.goods[1].name}} × {{item.goods[1].number}} 等 </text>
+      <view >
+        <text class="font-fd-24" >原价：¥</text>
+        <text class="font-fd-32" style='text-decoration:line-through'  >{{item.total}}</text>
+        <text decode="{{true}}" >&emsp;&emsp;</text>
+        <text class="font-fd-24">实付：¥</text>
+        <text class="font-fd-32" >{{item.actualTotal}}</text>
+      </view>
+    </view>
+
+  </view>
+</block>
+</van-tab>
+</van-tabs>
+
+      
+    
+
+
+
+
+
+</view>

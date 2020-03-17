@@ -1,0 +1,72 @@
+<view class="container">
+
+  <view class="header {{scrollDown?'hidden':''}}">
+    <image class="logo" src="{{shop.thumb}}" />
+    <view class="name ellipsis">{{shop.name}}</view>
+    <view class="welcome ellipsis">{{shop.des}}</view>
+    <view class="welcome ellipsis">📞{{shop.phone}}</view>
+    <view class="follow" bindtap="follow">{{followed?'已收藏':'收藏'}}</view>
+    
+    <view class="line"></view>
+    <view class="desc">餐盒费：{{shop.lunchboxFee}}元 | 配送费：{{shop.deliveryFee}}元 | 月销量：{{shop.monthlySale}}</view>
+    <view class="label-list desc">  
+      <view wx:for="{{shop.goodsDiscount}}" wx:for-item="dis" wx:key="id" >
+      | 满{{dis.total}}减{{dis.discount}} |
+      </view>
+    </view>
+    <view class="desc">地址：{{shop.address}}({{shop.condition}})</view>
+  </view>
+
+  <view class="content-container">
+    
+    <scroll-view class="classify-container" scroll-y="true">
+      <view class="classify {{classifySeleted==classify.id?'active':''}}" wx:for="{{shop.goodsList}}" wx:for-item="classify" wx:key="id" data-id="{{classify.id}}" bindtap="tapClassify">
+        <view class="name">{{classify.classifyName}}</view>
+      </view>
+    </scroll-view>
+
+    <scroll-view class="goods-container" scroll-y="true" scroll-into-view="{{classifyViewed}}" bindscroll="onGoodsScroll">
+			<view wx:for="{{shop.goodsList}}" wx:for-item="classify" wx:key="id" id="{{classify.id}}">
+				<view class="title">{{classify.classifyName}}</view>
+				<view class="goods" wx:for="{{goodsArray[index]}}" wx:for-item="id" wx:key="*this">
+					<image class="pic" src="{{goods[id].thumb}}"></image>
+					<view class="name ellipsis">{{goods[id].title}}</view>
+					<view class="sold">月售{{goods[id].num}}</view>
+					<view class="price">￥{{goods[id].price}}</view>
+					<view class="addCart" bindtap="tapAddCart" data-id="{{id}}">
+						<image src="/images/plus.png"></image>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+
+  </view>
+
+	<view class="cart-detail" hidden="{{!showCartDetail||!cart.count}}">
+		<view class="mask" bindtap="hideCartDetail"></view>
+		<view class="list">
+			<view class="item" wx:for="{{cart.list}}" wx:for-index="id" wx:for-item="num" wx:key="id">
+				<view class="name ellipsis">{{goods[id].name}}</view>
+				<view class="total">￥{{goods[id].price*cart.list[id]}}</view>
+				<view class="reduce" data-id="{{id}}" bindtap="tapReduceCart">-</view>
+				<view class="num">{{num}}</view>
+				<view class="add" data-id="{{id}}" bindtap="tapAddCart">+</view>
+			</view>
+		</view>
+	</view>
+
+  <view class="cart">
+		<view class="data" bindtap="showCartDetail">
+			<view class="icon">
+				<image src="/images/cart.png"></image>
+				<view class="count">{{cart.count}}</view>
+			</view>
+			<view class="total">￥{{cart.total}}</view>
+		</view>
+		<form bindsubmit="submit" report-submit="true">
+			<!--<view formType="submit" class="submit">去结算</view>-->
+			<button class="yellow {{cart.count?'':'disabled'}}" bindtap="submit" disabled="{{!cart.count}}">结算</button>
+		</form>
+	</view>
+
+</view>

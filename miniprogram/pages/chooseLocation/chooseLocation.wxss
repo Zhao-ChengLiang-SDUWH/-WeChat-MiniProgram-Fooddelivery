@@ -1,0 +1,5 @@
+/* pages/chooseLocation/chooseLocation.wxss */
+page {
+  width: 100%;
+  height: 100%;
+}

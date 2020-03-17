@@ -1,0 +1,4 @@
+<!--pages/storehomepage/storehomepage.wxml-->
+<text>商家界面</text>
+<import src="/template/tabbar.wxml"/> 
+ <template is="tabBar" data="{{tabBar}}"/>

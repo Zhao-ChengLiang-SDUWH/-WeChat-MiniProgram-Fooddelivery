@@ -1,0 +1,7 @@
+/* pages/search/search.wxss */
+.title{
+  font-size: 20px
+}
+.dis{
+  margin-top: 6px;
+}

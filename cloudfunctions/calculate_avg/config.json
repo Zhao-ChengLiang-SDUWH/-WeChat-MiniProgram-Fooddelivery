@@ -1,0 +1,9 @@
+{
+  "triggers": [
+    {
+      "name": "sendMessagerTimer",
+      "type": "timer",
+      "config": "0 0 23 * * 6 *"
+    }
+  ]
+}

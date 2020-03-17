@@ -1,0 +1,8 @@
+<!--pages/chooseLocation/chooseLocation.wxml-->
+<scroll-view scroll-y="{{true}}" style="height:94%">
+<van-cell-group wx:for="{{address}}" wx:key="{{index}}" data-id="{{item._id}}" catchtap="itemChange">
+<van-cell title="{{item.name+item.gender}}" value="{{item.phone}}" label="{{item.address}}" border="{{ false }}" >
+</van-cell>
+</van-cell-group>
+</scroll-view>
+<button type="primary" style="position:fixed;bottom:0px;width:100%" bindtap="addLocation">新增收货地址</button>

@@ -1,0 +1,42 @@
+<view  >
+ <van-search 
+  value="{{ value }}"
+  placeholder="查询商品"
+  input-align="center"
+  shape="round"
+  
+  bind:change="onChange"
+  bind:search="onSearch"
+/>
+</view >
+
+<van-dropdown-menu active-color="#FF8C00">
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" bind:change="selectKind"/>
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" bind:change="selectOrder"/>
+</van-dropdown-menu>
+
+<block wx:for="{{goods}}">
+  <van-card style='margin-left:10px'
+  num="{{ item.num }}"
+  tag="{{ item.myid }}"
+  price="{{ item.price }}"
+  desc="{{ item.desc }}"
+  title="{{ item.title }}"
+  thumb="{{ item.thumb }}"
+>
+  <view slot="tags">
+  <view>销量：{{item.sale}}</view>
+   <view>评分：{{item.grade}}</view>
+   <view>类别：{{item.tag}}</view>
+    <van-dialog id="van-dialog" />
+  </view>
+  <view slot="footer">
+    <van-button data-id='{{item._id}}' size="mini" bindtap="goToManage">编辑</van-button>
+    <van-button data-id='{{item._id}}' size="mini" bindtap="goToDelete">下架</van-button>
+    <van-dialog id="van-dialog" />
+  </view>
+  </van-card>
+</block>
+
+<van-button icon="star-o" bindtap='goToAdd' round type="info" type="primary" size='normal' style='position: fixed;bottom: 10px;display: flex;justify-content: center'>添加菜品</van-button>
+

@@ -1,0 +1,18 @@
+ <block wx:for="{{stores}}"  >
+<view class="wrap">
+  <van-cell-group>
+    <van-cell title="门店头像" center is-link bindtap="onpreviewImage">
+      <image class="shop-img"
+      src="{{item.thumb}}" />
+    </van-cell>
+    <van-cell title="门店名称" value="{{item.name}}" />
+    <van-cell title="门店ID" value="{{item._id}}" />
+  </van-cell-group>
+  <van-cell-group custom-class="dis-top">
+    <van-cell title="订餐电话" value="{{item.phone}}" />
+    <van-cell title="门店地址" value="{{item.address}}" />
+    <van-cell title="门店品类" value="{{item.type}}" />
+  </van-cell-group>
+</view>
+</block>
+

@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "订单详情",
+"navigationBarBackgroundColor": "#FF8C00",
+"navigationBarTextStyle": "white",
+"enablePullDownRefresh": true,
+    "component": true,
+    "usingComponents": {
+      "van-cell": "vant-weapp/cell/index",
+      "van-cell-group": "vant-weapp/cell-group/index",
+      "van-tag": "vant-weapp/tag/index"
+    }
+}

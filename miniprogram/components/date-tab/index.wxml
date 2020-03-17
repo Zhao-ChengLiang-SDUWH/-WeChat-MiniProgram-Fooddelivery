@@ -1,0 +1,28 @@
+<view class="title-date">
+  <text class="date {{dateId == 1 ? 'color' : ''}}" data-id="1" bindtap="onselectDate">全部</text>
+
+  <text class="iconfont icon-rili date {{dateId == 3 ? 'color' : ''}}" data-id="3" bindtap="onselectDate"></text>
+</view>
+<!-- 弹出层 -->
+<van-popup
+  show="{{ show }}"
+  position="top"
+  bind:close="onClose"
+  >
+   <view class="select_control">
+        <picker mode="date" value="{{date}}" bindchange="bindDateStart">
+            <view class="picker">
+                <input type="text" placeholder="选择起始时间" value="{{dateStart}}" class="picker_start" disabled />
+            </view>
+        </picker>
+        <text class="to">至</text>
+        <picker mode="date" value="{{date}}" bindchange="bindDateEnd" start="{{dateStart}}">
+            <view class="picker">
+                <input type="text" disabled placeholder="选择结束时间" value="{{dateEnd}}" class="picker_start" readonly />
+            </view>
+        </picker>
+        <view class="search">
+            <icon type="search" size="20" bind:tap="onsearch" />
+        </view>
+    </view>
+</van-popup>

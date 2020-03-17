@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "店铺管理",
+  "navigationBarBackgroundColor": "#FF8C00",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+      "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+     
+      "i-rate": "../../components/rate/index",
+      "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+      "van-button": "/miniprogram_npm/vant-weapp/button/index"
+    }
+  }

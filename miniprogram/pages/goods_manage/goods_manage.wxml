@@ -1,0 +1,45 @@
+<block wx:for="{{good}}">
+<view class='forms'>
+  <form bindsubmit='getForm'>
+  <view class='getform'>
+  <view style='font-weight:bold'>菜品id:
+  <input style='font-weight:normal' type='number' name='myid' value='{{item.myid}}' placeholder='请修改菜品id' class='inputtext'/>
+  </view>
+  
+  <view style='font-weight:bold'>菜名:
+  <input style='font-weight:normal' type='text' name='title' value='{{item.title}}' placeholder='请修改菜名' class='inputtext'></input>
+  </view>
+  
+  <view style='font-weight:bold'>价格:
+  <input style='font-weight:normal' type='digit' name='price' value='{{item.price}}' placeholder='请修改价格' class='inputtext'></input>
+  </view> 
+
+  <view style='font-weight:bold'>数量:
+  <input style='font-weight:normal' type='number' name='num' value='{{item.num}}' placeholder='请修改数量' class='inputtext'></input>
+  </view> 
+  
+  <view style='font-weight:bold'>标签:
+  <input style='font-weight:normal' type='text' name='tag' value='{{item.tag}}' placeholder='请修改标签（新品/热销/主食/小吃/套餐/饮料/其他）' class='inputtext'></input>
+  </view> 
+
+   <view style='font-weight:bold'>描述:
+  <input style='font-weight:normal' type='textarea' fixed='true' name='desc' value='{{item.desc}}' placeholder='请修改描述' class='inputtext'></input>
+  </view> 
+  
+</view>
+
+<image bindtap='savePhoto'  src='{{item.thumb}}'></image>
+
+ 
+ <view class="btn-area">
+        <button style='color:#fff;background-color:#07C160' formType="submit">1.上传</button>
+     </view>
+   </form>
+ 
+    <view class="btn-area">
+        <button style='color:#fff;background-color:#07C160' bindtap='saveData'>2.完成</button>
+     </view>
+ </view>
+ </block>
+
+

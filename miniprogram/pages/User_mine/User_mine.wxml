@@ -1,0 +1,18 @@
+<!--miniprogram/pages/User/User.wxml-->
+<import src="/template/tabbar.wxml"/> 
+ <template is="tabBar" data="{{tabBar}}"/>
+ <view class="information">
+<image class="avatar" src="{{avatarUrl}}" bindtap="chooseImage"></image>
+<text class="nickName">{{userInfo.nickName}}</text>
+</view>
+<view class="setting">
+<van-cell-group>
+  <van-cell center icon="cart-o" title="我的优惠" size="large" bindtap="discount"/>
+   <van-cell center icon="balance-list-o" title="我的收藏" size="large" bindtap="favoriteStore" />
+  <van-cell center icon="setting-o" title="我的信息" size="large" bindtap="goUpdata" />
+</van-cell-group>
+</view>
+<view class="escape">
+<van-button round type="danger" size="normal" bindtap="logout">退出登录</van-button>
+</view>
+<van-dialog id="van-dialog" />

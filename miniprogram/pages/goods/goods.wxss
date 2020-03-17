@@ -1,0 +1,49 @@
+page{
+  height:100%;
+}
+
+.menu{
+  display:block;
+  height:38px;
+}
+
+.menu dt{
+  font-size: 13px;
+  float: left;
+  width: 49.7%;
+  height: 38px;
+  border-right: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  text-align: center;
+  line-height: 38px;
+  background-color: #ffffff;
+}
+
+.menu dd{
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  left: 0;
+  z-index: 999;
+}
+
+.menu li{
+  font-size: 14px;
+  background-color: #F3F1EF;
+  line-height: 40px;
+  display: block;
+  padding-left: 8px;
+  border-bottom: 1px solid#ffffff;
+}
+
+.select{
+  color: red;
+}
+
+.show{
+  display: block;
+}
+
+.hidden{
+  display: none;
+}

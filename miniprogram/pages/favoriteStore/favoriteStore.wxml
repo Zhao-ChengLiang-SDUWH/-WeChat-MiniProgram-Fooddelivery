@@ -1,0 +1,14 @@
+<!--pages/favoriteStore/favoriteStore.wxml-->
+<scroll-view scroll-y="{{true}}">
+<view style="padding-bottom:30rpx">
+<text bindtap="edit" style="position:absolute;right:5px;font-size:35rpx;">{{text}}</text>
+</view>
+<view wx:for="{{storesData}}" wx:key="{{index}}" data-shop="{{item.id}}" bindtap="goto"class="oneStore">
+<image src="{{item.thumb}}" style="width:200rpx;height:150rpx" bindtap="goto" data-shop="{{item.id}}"></image>
+<view class="text">
+<text>{{item.name}}</text>
+<text style="font-size:30rpx;margin-top:20rpx;color:#f00">{{item.condition}}</text>
+</view>
+<button wx:if="{{show}}" style="color:#fff;background-color:#f00;margin-right:40rpx" size="mini" bindtap="delete" id="{{index}}">删除</button>
+</view>
+</scroll-view>

@@ -1,0 +1,14 @@
+<!--pages/choose/choose.wxml-->
+<view class="login">
+
+<view class="role">请问你是？</view>
+
+<view class="choose">
+<view><van-button size="large" open-type="getUserInfo" bindgetuserinfo="getUserInfo"  class="log" > 用户 </van-button></view>
+
+<view style="margin-top:100rpx"><van-button size="large" type="primary"  open-type="getUserInfo" bindgetuserinfo="getDeliverInfo">骑手</van-button></view>
+
+<view style="margin-top:100rpx"><van-button size="large" type="primary" open-type="getUserInfo" bindgetuserinfo="getBusinessInfo">商家</van-button></view>
+
+</view>
+</view>

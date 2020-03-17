@@ -1,0 +1,78 @@
+<!--pages/Deliver_curr/Deliver_curr.wxml-->
+<!-- <text style="text-align:center;margin:10rpx">待接订单</text> -->
+<import src="/template/tabbar.wxml"/> 
+<template is="tabBar" data="{{tabBar}}"/>
+
+
+
+<view wx:for='{{order}}' wx:key="index">
+<view class="orderDetails">
+
+    <view class="orderListTitle">
+        <view class="userImg"><image src="../../../../../images/shop.png"></image></view>
+        <text class="userName">{{item.store_name}}（{{item.store_address}}）</text>
+        <text class="orderStatus">{{item.condition}}</text>
+    </view>
+
+    
+    <view class="orderListDetails">
+        <view class="productImg">
+            <image src="{{item.thumb}}"></image>
+        </view>
+        <view class="productInfo">
+            
+            <block wx:for='{{item.goods}}' wx:key="index">
+             <view class="productTitle">{{item.name}}</view>
+             <text class="productPrice">￥{{item.price}}</text>
+             <text class="productQuantity">x{{item.number}}</text> 
+            </block>
+
+            <view class="productDes">  
+            <view>配送地址：{{item.destination}}</view>            
+            <view>下单时间：{{item.orderTime}}</view>
+            </view>
+        
+        </view>
+    </view>
+   
+    <view style="font-size:14px ; margin-left: 30rpx;">
+    <view class="weui-cells mgt-0 {{!showMore? 'hiddenmore' : 'showmore'}}">
+          <van-cell class='fc-red'>
+          <text style="float: left;">用户信息：</text>{{item._openid}}
+          </van-cell>
+    </view>
+    <view class="hiddenmore">
+    </view>
+    <view class="weui-cells mgt-0 {{!showMore? 'hiddenmore' : 'showmore'}}">
+        <view class="weui-cell__ft fc-66 fs-28">          
+          <van-cell class='fc-red'>
+          <text style="float: left;">商家信息：</text>{{item.merchantOpenid}}
+          </van-cell>
+        </view>
+    </view>
+     <view class="weui-cells mgt-0 {{!showMore? 'hiddenmore' : 'showmore'}}">
+        <view class="weui-cell__ft fc-66 fs-28">
+          <van-cell class='fc-red'>
+          <text style="float: left;">商品总价：</text>￥{{item.actualTotal}}
+          </van-cell>
+        </view>
+    </view>
+    <view class="weui-cells mgt-0 {{!showMore? 'hiddenmore' : 'showmore'}}">
+       <van-button plain round type="primary" size="small" color="#FF8C00" data-id='{{item._id}}' bindtap="toChange" block>接收订单</van-button>
+    </view>
+    </view>
+    
+    <view class="productCount">      
+        <view style="float: right; margin-right: 30rpx;">运费：<text style="color:#B22222;">￥{{item.deliverFee}}</text></view>
+      <view wx:if="{{showMore}}" style="font-size: 14px;color: #696969;margin-left: 30rpx" bindtap='listToggle'>
+        收起 ◤
+        <icon class="shishuofont icon-list-close"></icon>
+      </view>
+      <view wx:else style="font-size: 14px;color: #696969;margin-left: 30rpx;" bindtap='listToggle'>
+        更多详情 ◢
+        <icon class="shishuofont icon-list-open"></icon>
+      </view>
+    </view>
+
+</view>  
+</view>

@@ -1,0 +1,60 @@
+/* pages/homepage/homepage.wxss */
+page{
+  background: white
+}
+.greating{
+
+ 
+  
+}
+.greating2{
+
+  padding-left:50%;
+  
+}
+.image{
+  
+  width: 25px;
+  height: 25px;
+  padding-left: 35%;
+  
+  padding-top: 5px;
+}
+.image2{
+  
+  width: 25px;
+  height: 25px;
+  padding-left: 5%;
+ 
+  padding-top: 5px;
+}
+.search{
+  padding-top: 30px;
+}
+.text1{
+  padding-left: 5px;
+  padding-bottom: 50%;
+  color: slategrey;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.text2{
+  
+  color:#a7a7a7;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  white-space: nowrap;
+}
+.text3{
+  font-size: 12px;
+  color: gray;
+}
+.meun{
+  background: gainsboro;
+  color:  gainsboro;
+  
+}
+.t{
+  position: fixed
+}
