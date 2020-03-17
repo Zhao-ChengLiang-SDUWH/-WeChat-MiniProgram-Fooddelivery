@@ -1,9 +1,3 @@
-https://s1.ax1x.com/2020/03/17/8URf8e.png
-https://s1.ax1x.com/2020/03/17/8URIKA.png
-https://s1.ax1x.com/2020/03/17/8UR24O.png
-https://s1.ax1x.com/2020/03/17/8URyHx.png
-https://s1.ax1x.com/2020/03/17/8URBv9.png
-https://s1.ax1x.com/2020/03/17/8URTbt.png
 
 | 姓名   | 学号         |
 | ------ | ------------ |
