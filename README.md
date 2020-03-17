@@ -1,4 +1,8 @@
-
+https://imgchr.com/i/8UgbLt
+https://imgchr.com/i/8UgLeP
+https://imgchr.com/i/8Ug5Je
+https://imgchr.com/i/8Ugozd
+https://imgchr.com/i/8UgHsI
 
 | 姓名   | 学号         |
 | ------ | ------------ |
@@ -97,7 +101,7 @@
 
 用户进入主界面后，有很多选择
 
-<img src="/Users/zcl271828/Desktop/截屏2020-03-17下午4.31.13.png" alt="截屏2020-03-17下午4.31.13" style="zoom:50%;" />
+<img src="https://imgchr.com/i/8UgbLt" alt="截屏2020-03-17下午4.31.13" style="zoom:50%;" />
 
 
 
@@ -107,7 +111,7 @@
 
 ### 定时提醒页面
 
-<img src="/Users/zcl271828/Desktop/截屏2020-03-17下午4.48.20.png" alt="截屏2020-03-17下午4.48.20" style="zoom:40%;" />
+<img src="https://imgchr.com/i/8UgHsI" style="zoom:40%;" />
 
 可以添加提醒 包括选择提醒时间 提醒日期 
 
@@ -115,7 +119,7 @@
 
 ### 订单页面
 
-<img src="/Users/zcl271828/Desktop/截屏2020-03-17下午4.35.07.png" alt="截屏2020-03-17下午4.35.07" style="zoom:40%;" />
+<img src="https://imgchr.com/i/8UgLeP" alt="截屏2020-03-17下午4.35.07" style="zoom:40%;" />
 
 ### 娱乐页面
 
@@ -127,11 +131,11 @@
 
 
 
-<img src="/Users/zcl271828/Desktop/截屏2020-03-17下午4.35.14.png" alt="截屏2020-03-17下午4.35.14" style="zoom:40%;" />
+<img src="https://imgchr.com/i/8Ug5Je" alt="截屏2020-03-17下午4.35.14" style="zoom:40%;" />
 
 #### 个人消费
 
-<img src="/Users/zcl271828/Desktop/截屏2020-03-17下午4.35.23.png" alt="截屏2020-03-17下午4.35.23" style="zoom:40%;" />
+<img src="https://imgchr.com/i/8Ugozd" alt="截屏2020-03-17下午4.35.23" style="zoom:40%;" />
 
 ### 商家页面
 
