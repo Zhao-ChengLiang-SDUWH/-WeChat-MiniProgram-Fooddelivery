@@ -1,8 +1,9 @@
-https://imgchr.com/i/8UgbLt
-https://imgchr.com/i/8UgLeP
-https://imgchr.com/i/8Ug5Je
-https://imgchr.com/i/8Ugozd
-https://imgchr.com/i/8UgHsI
+https://s1.ax1x.com/2020/03/17/8URf8e.png
+https://s1.ax1x.com/2020/03/17/8URIKA.png
+https://s1.ax1x.com/2020/03/17/8UR24O.png
+https://s1.ax1x.com/2020/03/17/8URyHx.png
+https://s1.ax1x.com/2020/03/17/8URBv9.png
+https://s1.ax1x.com/2020/03/17/8URTbt.png
 
 | 姓名   | 学号         |
 | ------ | ------------ |
@@ -101,7 +102,7 @@ https://imgchr.com/i/8UgHsI
 
 用户进入主界面后，有很多选择
 
-<img src="https://imgchr.com/i/8UgbLt" alt="截屏2020-03-17下午4.31.13" style="zoom:50%;" />
+<img src="https://s1.ax1x.com/2020/03/17/8URf8e.png" alt="截屏2020-03-17下午4.31.13" style="zoom:50%;" />
 
 
 
@@ -111,15 +112,15 @@ https://imgchr.com/i/8UgHsI
 
 ### 定时提醒页面
 
-<img src="https://imgchr.com/i/8UgHsI" style="zoom:40%;" />
+<img src="https://s1.ax1x.com/2020/03/17/8URBv9.png" style="zoom:40%;" />
 
 可以添加提醒 包括选择提醒时间 提醒日期 
 
-<img src="/Users/zcl271828/Library/Application Support/typora-user-images/截屏2020-03-17下午4.51.01.png" alt="截屏2020-03-17下午4.51.01" style="zoom:30%;" />
+<img src="https://s1.ax1x.com/2020/03/17/8URTbt.png" alt="截屏2020-03-17下午4.51.01" style="zoom:30%;" />
 
 ### 订单页面
 
-<img src="https://imgchr.com/i/8UgLeP" alt="截屏2020-03-17下午4.35.07" style="zoom:40%;" />
+<img src="https://s1.ax1x.com/2020/03/17/8URIKA.png" alt="截屏2020-03-17下午4.35.07" style="zoom:40%;" />
 
 ### 娱乐页面
 
@@ -127,15 +128,17 @@ https://imgchr.com/i/8UgHsI
 
 
 
-#商家页面及下单页面
 
 
 
-<img src="https://imgchr.com/i/8Ug5Je" alt="截屏2020-03-17下午4.35.14" style="zoom:40%;" />
+
+<img src="https://s1.ax1x.com/2020/03/17/8UR24O.png" alt="截屏2020-03-17下午4.35.14" style="zoom:40%;" />
 
 #### 个人消费
 
-<img src="https://imgchr.com/i/8Ugozd" alt="截屏2020-03-17下午4.35.23" style="zoom:40%;" />
+<img src="https://s1.ax1x.com/2020/03/17/8URyHx.png" alt="截屏2020-03-17下午4.35.23" style="zoom:40%;" />
+
+
 
 ### 商家页面
 
