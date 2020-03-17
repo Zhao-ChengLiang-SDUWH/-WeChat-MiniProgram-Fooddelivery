@@ -8,6 +8,8 @@
 | 闫文超 | 201800820236 |
 
 本小程序使用了 **vant-weapp UI组件** 和**E-chats 数据可视化组件**
+
+
 **vant-weapp** :https://youzan.github.io/vant-weapp/#/intro
 **E-chats** : https://www.echartsjs.com/zh/index.html
 # 数据库结构
