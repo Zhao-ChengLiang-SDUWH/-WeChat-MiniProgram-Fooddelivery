@@ -7,7 +7,7 @@
 | 徐潇涵 | 201800820149 |
 | 闫文超 | 201800820236 |
 
-
+本小程序使用了 **vant-weapp UI组件** 和**E-chats 数据可视化组件**
 # 数据库结构
 
 <img src="https://s1.ax1x.com/2020/03/17/8dAWZQ.png" style="zoom:60%;" />
