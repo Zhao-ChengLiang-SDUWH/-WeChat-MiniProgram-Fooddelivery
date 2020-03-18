@@ -502,3 +502,4 @@
 ### 引用和参考说明
 1. 订单卡片样式参考了github中他人作品中的订单样式（有修改），其Repository为：BbC1314/takeOutWeapp；作者账号为：z825316969。
 2. 商家端我的店铺页面中的“预计收入”子页面（未修改、未开发）参考了该作品（同上）对应部分的代码。
+3. 实现不同用户不同底部Tabbar  时部分代码参考（有修改） ：https://blog.csdn.net/qq_26722321/article/details/88658103?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task
