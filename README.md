@@ -499,4 +499,6 @@
 
      [<img src="https://s1.ax1x.com/2020/03/17/8NzdbV.png" alt="8NzdbV.png" style="zoom: 50%;" />](https://imgchr.com/i/8NzdbV)
 
-   
+### 引用和参考说明
+1. 订单卡片样式参考了github中他人作品中的订单样式（有修改），其Repository为：BbC1314/takeOutWeapp。
+2. 商家端我的店铺页面中的“预计收入”子页面（未修改、未开发）参考了该作品（同上）的代码。
