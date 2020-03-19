@@ -14,6 +14,15 @@
 
 
 **E-chats** : https://www.echartsjs.com/zh/index.html
+
+
+# 欢迎扫码体验
+
+<img src="https://s1.ax1x.com/2020/03/19/8rcqXD.jpg" style="zoom:40%;" />
+
+小程序码为审核通过后
+
+
 # 数据库结构
 
 <img src="https://s1.ax1x.com/2020/03/17/8dAWZQ.png" style="zoom:60%;" />
