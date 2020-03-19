@@ -18,7 +18,7 @@
 
 # 欢迎扫码体验
 
-<img src="https://s1.ax1x.com/2020/03/19/8rcqXD.jpg" width="60" height="60" />
+<img src="https://s1.ax1x.com/2020/03/19/8rcqXD.jpg" width="200" height="200" />
 
 小程序码为审核通过后(3.19)添加至README
 
