@@ -20,8 +20,7 @@
 
 <img src="https://s1.ax1x.com/2020/03/19/8rcqXD.jpg" style="zoom:40%;" />
 
-小程序码为审核通过后
-
+小程序码为审核通过后(3.19)添加至README
 
 # 数据库结构
 
